@@ -1,0 +1,6 @@
+{
+  "name": "voteplay",
+  "dependencies": {
+    "materialize": "~0.97.0"
+  }
+}

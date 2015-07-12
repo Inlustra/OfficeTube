@@ -1,16 +1,12 @@
 var elixir = require('laravel-elixir');
+var gulp = require("gulp");
+var wiredep = require("laravel-elixir-wiredep");//I'm working on this
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
+var paths = [
+    './public/bower_components/materialize/sass/'
+];
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss', 'public/css/', {includePaths: paths})
+        .wiredep();
 });
