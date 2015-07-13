@@ -4,7 +4,7 @@
         <!-- bower:css -->
         <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
         <!-- endbower -->
-        <link rel="stylesheet" href="public/css/app.css" />
+        <link rel="stylesheet" href="{{ elixir("css/app.css") }}" />
     </head>
     <body>
         <ul id="slide-out" class="side-nav fixed">
@@ -50,5 +50,10 @@
         <script>
             $(".button-collapse").sideNav();
         </script>
+        @if ( Config::get('app.debug') )
+          <script type="text/javascript">
+            document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+          </script>
+        @endif
     </body>
 </html>

@@ -18,6 +18,7 @@ main, header, footer {
     border-bottom: solid #F0F0F0 thin;
 }
 
+
 ul.side-nav.fixed {
     overflow: hidden;
 }

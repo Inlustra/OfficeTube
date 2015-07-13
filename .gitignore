@@ -1,6 +1,6 @@
 /vendor
 /public/bower_components
 /node_modules
-/.idea
+/.idea/*
 Homestead.yaml
 .env
