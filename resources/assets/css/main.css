@@ -44,3 +44,12 @@ ul.side-nav.fixed ul.collapsible-accordion {
 ul.side-nav.fixed:hover {
     overflow-y: auto;
 }
+
+.glow {
+    transition: all 0.3s ease-in;
+    text-shadow:none;
+}
+
+.glow:hover {
+    text-shadow: 0 0 20px white;
+}
