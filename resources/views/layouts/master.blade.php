@@ -2,45 +2,9 @@
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css"/>
+        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
         <!-- endbower -->
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            main, header, footer {
-                padding-left: 240px;
-            }
-
-            @media only screen and (max-width: 992px) {
-                main, header, footer {
-                    padding-left: 0;
-                }
-            }
-
-            .logo {
-                height: 100px;
-                border-bottom: solid #F0F0F0 thin;
-            }
-
-            ul.side-nav.fixed {
-                overflow: hidden; }
-            ul.side-nav.fixed li {
-                line-height: 44px; }
-            ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
-                background-color: rgba(0, 0, 0, 0.05); }
-            ul.side-nav.fixed li a {
-                font-size: 13px;
-                line-height: 44px;
-                height: 44px; }
-            ul.side-nav.fixed ul.collapsible-accordion {
-                background-color: #FFF; }
-            ul.side-nav.fixed:hover {
-                overflow-y: auto; }
-        </style>
+        <link rel="stylesheet" href="public/css/app.css" />
     </head>
     <body>
         <ul id="slide-out" class="side-nav fixed">

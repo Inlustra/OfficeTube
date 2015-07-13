@@ -8,7 +8,5 @@
 
 @section('main')
 
-            <div class="title">Laravel Auto Build Test</div>
-
 @endsection
 

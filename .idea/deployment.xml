@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="pfft" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" serverName="178.62.108.213" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="pfft">
+      <paths name="178.62.108.213">
         <serverdata>
           <mappings>
             <mapping deploy="OfficeTube/" local="$PROJECT_DIR$" web="/" />
@@ -10,6 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>
+
