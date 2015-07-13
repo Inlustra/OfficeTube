@@ -9,7 +9,8 @@
 @section('main')
     <div class="section blue-grey lighten-4 black-text">
         <div class="container">
-            <h1><span class="grey-text text-darken-3">Vote</span><strong class="pink-text text-darken-1">Play</strong></h1>
+            <h1><span class="grey-text text-darken-3">Vote</span><strong class="pink-text text-darken-1">Play</strong>
+            </h1>
         </div>
         <div class="row">
             <div class="col s12 center">
@@ -63,6 +64,16 @@
     </div>
     <div class="section no-pad-top no-pad-bot parallax-image-section">
         <div class="parallax-container">
+            <div class="parallax-content-wrapper white-text">
+                <div class="parallax-content valign-wrapper center">
+                    <div class="valign center-block">
+                        <h4 class="">What are you waiting for?</h4>
+                        <h5>
+                            Join the revolution!
+                        </h5>
+                    </div>
+                </div>
+            </div>
             <div class="parallax"><img src="img/backdrop.png"></div>
         </div>
     </div>
