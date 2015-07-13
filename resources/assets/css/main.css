@@ -18,12 +18,6 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
-.parallax-container {
-    height: 200px;
-}.parallax-image-section
- {
-     height: 200px;
- }
 main {
     flex: 1 0 auto;
 }

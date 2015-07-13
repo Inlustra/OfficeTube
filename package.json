@@ -3,8 +3,8 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-livereload": "^3.8.0",
-    "run-sequence": "^1.1.1",
-    "laravel-elixir-livereload": "0.0.3"
+    "laravel-elixir-livereload": "0.0.3",
+    "run-sequence": "^1.1.1"
   },
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
