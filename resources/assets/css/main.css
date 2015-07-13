@@ -13,6 +13,21 @@ main, header, footer {
     }
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.parallax-container {
+    height: 200px;
+}.parallax-image-section
+ {
+     height: 200px;
+ }
+main {
+    flex: 1 0 auto;
+}
+
 .logo {
     height: 100px;
     border-bottom: solid #F0F0F0 thin;
@@ -52,4 +67,9 @@ ul.side-nav.fixed:hover {
 
 .glow:hover {
     text-shadow: 0 0 20px white;
+}
+
+.sign-up {
+    height:62px;
+    line-height: 36px;
 }

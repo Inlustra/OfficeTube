@@ -11,10 +11,10 @@
     </head>
     <body>
         <ul id="slide-out" class="side-nav fixed">
-            <li class="logo">
+            <li class="logo grey darken-3">
                 <div class="valign-wrapper">
-                    <h3 class="valign center-block">
-                        V<strong class="light-blue-text">P</strong>
+                    <h3 class="valign center-block white-text">
+                        V<strong class="cyan-text text-accent-3">P</strong>
                     </h3>
                 </div>
             </li>
@@ -43,7 +43,25 @@
         <main>
             @yield('main')
         </main>
-        <footer>
+        <footer class="purple lighten-1">
+        <div class="container">
+                    <div class="row">
+                      <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                      </div>
+                      <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-copyright">
+                    <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
+                  </div>
             @yield('footer')
         </footer>
         <!-- bower:js -->
@@ -53,6 +71,7 @@
         <script>
             $(".button-collapse").sideNav();
         </script>
+        @yield('script')
         @if ( Config::get('app.debug') )
           <script type="text/javascript">
             document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
