@@ -5,19 +5,22 @@
         <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/app.css") }}" />
+
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <ul id="slide-out" class="side-nav fixed">
             <li class="logo">
                 <div class="valign-wrapper">
                     <h3 class="valign center-block">
-                        Vote<strong class="light-blue-text">Play</strong>
+                        V<strong class="light-blue-text">P</strong>
                     </h3>
                 </div>
             </li>
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header waves-effect waves-red">Rooms</a>
+                    <li class="bold"><a class="collapsible-header waves-effect waves-teal">Rooms</a>
                         <div class="collapsible-body">
                             <ul>
                                 <li><a href="color.html"><i class="mdi-toggle-star"></i> Top Rooms</a></li>
@@ -34,7 +37,7 @@
         </ul>
         <a href="#" data-activates="slide-out" class="hide-on-large-only button-collapse"><i
                     class="mdi-navigation-menu"></i></a>
-        <header style="height:100px;" class="light-blue accent-1">
+        <header>
             @yield('header')
         </header>
         <main>
