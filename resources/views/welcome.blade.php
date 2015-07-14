@@ -7,7 +7,7 @@
 @endsection
 
 @section('main')
-    <div class="section blue-grey lighten-4 black-text">
+    <div class="section backgroundColor">
         <div class="container">
             <h1><span class="grey-text text-darken-3">Vote</span><strong class="pink-text text-darken-1">Play</strong>
             </h1>

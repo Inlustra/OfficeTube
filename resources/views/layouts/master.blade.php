@@ -2,9 +2,9 @@
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
-        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css"/>
+        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
         <!-- endbower -->
-        <link rel="stylesheet" href="{{ elixir("css/app.css") }}"/>
+        <link rel="stylesheet" href="{{ elixir("css/all.css") }}"/>
 
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
