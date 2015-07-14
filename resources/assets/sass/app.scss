@@ -1,8 +1,11 @@
  @import "public/bower_components/materialize/sass/materialize";
 
  .backgroundColor {
-   @extend .red;
-   @extend .lighten-3;
+   @extend .blue-grey.lighten-4;
+ }
+
+ .titleAccent {
+   @extend .red.lighten-3;
  }
 
 
