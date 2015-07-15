@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="178.62.108.213" autoUploadExternalChanges="true">
-    <serverData>
-      <paths name="178.62.108.213">
-        <serverdata>
-          <mappings>
-            <mapping deploy="OfficeTube/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
-  </component>
+  <component name="PublishConfigData" serverName="178.62.108.213" autoUploadExternalChanges="true" />
 </project>
-

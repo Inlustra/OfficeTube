@@ -1,13 +1,30 @@
- @import "public/bower_components/materialize/sass/materialize";
+@import "public/bower_components/materialize/sass/materialize";
 
- .backgroundColor {
-   @extend .blue-grey.lighten-4;
- }
+.mainAccent {
+  @extend .pink;
+}
 
- .titleAccent {
-   @extend .red.lighten-3;
- }
+.text-mainAccent {
+  @extend .pink-text;
+}
+
+.background {
+  @extend .blue-grey;
+}
+
+.text-background {
+  @extend .blue-grey-text;
+}
+
+.foreground {
+  @extend .grey;
+}
+
+.text-foreground {
+  @extend .grey-text;
+}
 
 
- .mainAccent {
+
+.mainAccent {
 }

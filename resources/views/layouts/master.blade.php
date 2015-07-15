@@ -9,13 +9,11 @@
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body>
+    <body class="text-foreground text-darken-4">
         <ul id="slide-out" class="side-nav fixed">
-            <li class="logo grey darken-3">
-                <div class="valign-wrapper">
-                    <h3 class="valign center-block white-text">
-                        V<strong class="pink-text text-darken-1">P</strong>
-                    </h3>
+            <li class="logo grey darken-3 center-align valign">
+                <div class="fill valign-wrapper">
+                    <img class="center-block valign" src="img/logo.png"/>
                 </div>
             </li>
             <li class="no-padding">

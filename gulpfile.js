@@ -1,3 +1,4 @@
+process.env.DISABLE_NOTIFIER = true; process.env.DISABLE_NOTIFIER = true;
 var elixir = require('laravel-elixir');
 var gulp = require("gulp");
 var wiredep = require("laravel-elixir-wiredep");//I'm working on this
