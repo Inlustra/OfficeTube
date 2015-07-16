@@ -11,7 +11,7 @@
     </head>
     <body class="text-foreground text-darken-4">
         <ul id="slide-out" class="side-nav fixed">
-            <li class="logo grey darken-3 center-align valign">
+            <li class="logo background darken-4 center-align valign">
                 <div class="fill valign-wrapper">
                     <img class="center-block valign" src="img/logo.png"/>
                 </div>

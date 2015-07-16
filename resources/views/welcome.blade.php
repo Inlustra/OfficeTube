@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="section sign-up foreground darken-3">
+    <div class="section sign-up background darken-4">
         <div class="container text-foreground text-lighten-1">
             <div class="row">
                 <div class="col s12 m6 center">
