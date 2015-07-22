@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
     "laravel-elixir": "^2.0.0",
-    "laravel-elixir-wiredep": "^0.1.2"
+    "laravel-elixir-wiredep": "^0.1.2",
+    "laravel-elixir-useref": "^1.1.0"
   }
 }

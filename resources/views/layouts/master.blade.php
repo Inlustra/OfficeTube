@@ -2,7 +2,7 @@
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
-        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css"/>
+        <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/all.css") }}"/>
 
@@ -69,8 +69,10 @@
             @stop
         </footer>
         <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/materialize/bin/materialize.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="/bower_components/angular-material/angular-material.js"></script>
         <!-- endbower -->
         <script>
             $(".button-collapse").sideNav();
