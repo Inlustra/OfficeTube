@@ -2,7 +2,7 @@
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
-        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
+        <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css"/>
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/all.css") }}"/>
 
@@ -13,7 +13,7 @@
         <ul id="slide-out" class="side-nav fixed">
             <li class="logo background darken-4 center-align valign">
                 <div class="fill valign-wrapper">
-                    <img class="center-block valign" src="img/logo.png"/>
+                    <img class="center-block valign" src="{{asset('img/logo.png')}}"/>
                 </div>
             </li>
             <li class="no-padding">
@@ -34,8 +34,9 @@
             <li><a href="#!">Top Votes</a></li>
             <li><a href="#!">New Room</a></li>
         </ul>
-        <a href="#" data-activates="slide-out" class="hide-on-large-only button-collapse"><i
-                    class="mdi-navigation-menu"></i></a>
+        <a href="#" data-activates="slide-out" class="hide-on-large-only button-collapse">
+            <i class="mdi-navigation-menu"></i>
+        </a>
         <header>
             @yield('header')
         </header>

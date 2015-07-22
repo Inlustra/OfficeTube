@@ -53,7 +53,7 @@
                     Sign up with YouTube or Soundcloud!
                 </div>
                 <div class="col s12 m6 center">
-                    <a class="btn-flat waves-effect waves-light text-mainAccent text-accent-2" href="/login">
+                    <a class="btn-flat waves-effect waves-light text-mainAccent text-accent-2" href="{{URL::route('auth.login')}}">
                         Sign up
                     </a>
                 </div>

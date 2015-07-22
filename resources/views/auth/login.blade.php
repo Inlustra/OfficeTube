@@ -33,17 +33,17 @@
                                     </div>
                                   </div>
                                   <div class="row">
-                                  <div class="col s12 m6">
+                                  <div class="col s12 m4">
                                   <div class="left">
                                     <a href="{{ URL::route('auth.soundcloud') }}">
                                       <img src="http://connect.soundcloud.com/2/btn-connect-l.png"/>
                                     </a>
                                   </div>
                                   </div>
-                                  <div class="col s12 m6">
+                                  <div class="col s12 m8">
                                     <div class="right">
-                                         <button class="btn ">Login</button>
-                                         <button class="btn btn-flat text-mainAccent text-accent-4 background">Sign up</button>
+                                         <a class="btn">Login</a>
+                                         <a class="btn btn-flat text-mainAccent text-accent-4 background" href="{{ URL::route('auth.register') }}">Sign up</a>
                                       </div>
                                   </div>
                                   </div>

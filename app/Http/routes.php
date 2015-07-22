@@ -15,12 +15,7 @@
         return view('welcome');
     });
 
-    Route::get('/signup', function () {
-        return view('auth/signup');
-    });
 
-    Route::get('/login', function () {
-        return view('auth/login');
-    });
-
+    Route::get('auth/login', ['as' => 'auth.login', 'uses' => 'Auth\\AuthController@showLogin']);
+    Route::get('auth/register', ['as' => 'auth.register', 'uses' => 'Auth\\AuthController@showRegister']);
     Route::get('auth/soundcloud', ['as' => 'auth.soundcloud', 'uses' => 'Auth\\OAuthController@loginWithSoundcloud']);
