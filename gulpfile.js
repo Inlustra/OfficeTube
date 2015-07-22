@@ -7,7 +7,8 @@ var useref = require('laravel-elixir-useref');
 var livereload = require('laravel-elixir-livereload');
 
 elixir(function (mix) {
-    mix.sass('app.scss')
+    mix.sass("app.scss", 'public/css/')
+        .version(['css/app.css','css/main.css'])
         .wiredep({
             baseDir: 'public/',    //the folder for your views
             src: false, //if you just want to inject dependencies on one file just specify it's source, relative to baseDir
@@ -18,6 +19,7 @@ elixir(function (mix) {
 gulp.task("live", function () {
     elixir(function (mix) {
         mix.sass('app.scss')
+            .version(['css/app.css','css/main.css'])
             .wiredep({
                 baseDir: 'public/',    //the folder for your views
                 src: false, //if you just want to inject dependencies on one file just specify it's source, relative to baseDir

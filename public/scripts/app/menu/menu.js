@@ -4,6 +4,7 @@ app.config(function ($stateProvider) {
     return {
         replace: true,
         restrict: 'E',
-        templateUrl: "/views/menu.menu"
+        templateUrl: "/views/menu",
+        controller:'MenuController'
     };
 });

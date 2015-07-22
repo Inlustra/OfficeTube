@@ -15,7 +15,7 @@
     });
 
     Route::get('/views/{name}', function ($name) {
-        $view_path = 'scripts.app.' . $name;
+        $view_path = 'scripts.app.' . $name.'.'.$name;
         if (View::exists($view_path)) {
             return View::make($view_path);
         }
@@ -28,6 +28,6 @@
     //});
 
 
-    //Route::get('auth/login', ['as' => 'auth.login', 'uses' => 'Auth\\AuthController@showLogin']);
-    //Route::get('auth/register', ['as' => 'auth.register', 'uses' => 'Auth\\AuthController@showRegister']);
-    //Route::get('auth/soundcloud', ['as' => 'auth.soundcloud', 'uses' => 'Auth\\OAuthController@loginWithSoundcloud']);
+    Route::get('auth/login', ['as' => 'auth.login', 'uses' => 'Auth\\AuthController@showLogin']);
+    Route::get('auth/register', ['as' => 'auth.register', 'uses' => 'Auth\\AuthController@showRegister']);
+    Route::get('auth/soundcloud', ['as' => 'auth.soundcloud', 'uses' => 'Auth\\OAuthController@loginWithSoundcloud']);

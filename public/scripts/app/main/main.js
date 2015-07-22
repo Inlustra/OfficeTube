@@ -1,7 +1,8 @@
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider) {
     $stateProvider
         .state('main', {
             url: '/',
-            templateUrl: 'views/main.main'
+            templateUrl: 'views/main',
+            controller:'MainController'
         });
 });

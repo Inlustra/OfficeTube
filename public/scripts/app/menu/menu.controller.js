@@ -1,3 +1,4 @@
-app.controller('MenuController', function($scope) {
-    $scope.greeting = 'Hola!';
+app.controller('MenuController', function ($scope) {
+    $(".button-collapse").sideNav();
+    $('.collapsible').collapsible();
 });
