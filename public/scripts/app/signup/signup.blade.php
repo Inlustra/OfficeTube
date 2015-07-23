@@ -7,16 +7,16 @@
                     <span>Just a few questions to get to know you!</span>
                 </div>
                 <section class="container minimal-form">
-                    <form class="background darken-4 pam">
+                    <form novalidate name="myForm" class="background darken-4 pam">
                         <div class="minimal-form-input input-field col s12">
+                            <input id="Full-Name" type="text" class="mbs validate" required>
+                            <label class="active" for="Full-Name">Full Name</label>
+                        </div>
+                        <div class="minimal-form-input input-field col s12" required>
                             <input id="Email" type="email" class="mbs validate">
                             <label class="active" for="Email">Email</label>
                         </div>
-                        <div class="minimal-form-input input-field col s12">
-                            <input id="Email" type="email" class="mbs validate">
-                            <label class="active" for="Email">Email</label>
-                        </div>
-                        <div class="minimal-form-input input-field col s12">
+                        <div class="minimal-form-input input-field col s12" required>
                             <input id="Email" type="email" class="mbs validate">
                             <label class="active" for="Email">Email</label>
                         </div>
@@ -28,6 +28,58 @@
                         <div class="minimal-form-progress mainAccent background"></div>
                     </div>
                     <div class="minimal-form-questions text-background text-lighten-1 darken-2 pam">0/3</div>
+                    <div class="minimal-form-end">
+                        <h3 class="center">
+                            <div class="preloader-wrapper big active">
+                                <div class="spinner-layer spinner-blue">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+
+                                <div class="spinner-layer spinner-red">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+
+                                <div class="spinner-layer spinner-yellow">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+
+                                <div class="spinner-layer spinner-green">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                        </h3>
+                    </div>
                 </section>
             </div>
             <!-- /container -->

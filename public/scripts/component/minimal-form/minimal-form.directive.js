@@ -21,9 +21,6 @@ app.directive('minimalForm', function ($timeout) {
         }
 
         function setFields() {
-            if (max <= currentNumber) {
-                return;
-            }
             var current = element[0].querySelector('.minimal-form-current');
             current.classList.remove('minimal-form-current');
             current.classList.add('minimal-form-hiding');
@@ -35,8 +32,22 @@ app.directive('minimalForm', function ($timeout) {
             }, 200);
         }
 
+        function end() {
+            var current = element[0].querySelector('.minimal-form > form');
+            current.classList.add('minimal-form-hidden');
+            current = element[0].querySelector('.minimal-form-progress-container');
+            current.classList.add('minimal-form-hidden');
+            current = element[0].querySelector('.minimal-form-questions');
+            current.classList.add('minimal-form-hidden');
+            nextButton.classList.add('minimal-form-hidden');
+
+            current = element[0].querySelector('.minimal-form-end');
+            current.classList.remove('minimal-form-hidden');
+            current.classList.add('minimal-form-current');
+        }
+
         function setProgress() {
-            var percent = Math.min(((currentNumber + 1) / max) * 100, 100);
+            var percent = ((currentNumber + 1) / max) * 100;
             progress.css({'width': percent + '%'});
         }
 
@@ -46,11 +57,19 @@ app.directive('minimalForm', function ($timeout) {
         }
 
         var next = function () {
-            currentNumber++;
+            var current = element[0].querySelector('.minimal-form-current > input');
+            if (!current.checkValidity()) {
+                return;
+            }
+            if (max <= ++currentNumber) {
+                end();
+                return;
+            }
             setFields();
             setProgress();
             setNumber();
         };
+
         var previous = function () {
             currentNumber--;
             setFields();
