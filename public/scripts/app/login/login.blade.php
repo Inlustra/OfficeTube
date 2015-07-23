@@ -1,7 +1,7 @@
 <section class="fill background darken-4 text-foreground">
-    <div class="fill valign-wrapper ">
+    <div class="fill valign-wrapper">
         <div class="container valign">
-            <div class="background darken-3 login-box text-background text-lighten-3">
+            <div class="background darken-3 login-box text-background text-lighten-3 pam">
                 <div class="center">
                     <h1 class="">Login to Vote<span class="text-mainAccent text-accent-4">Play</span>! </h1>
                     <span>[[randomQuote]]</span>
