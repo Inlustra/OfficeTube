@@ -1,3 +1,4 @@
 var app = angular.module('VotePlay', [
-    'ui.router'
+    'ui.router',
+    'ngAnimate'
 ]);

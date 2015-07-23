@@ -1,29 +1,36 @@
-<div>
-    <ul id="slide-out" class="side-nav fixed">
-        <li class="logo background darken-4 center-align valign">
-            <div class="fill valign-wrapper">
-                <img class="center-block valign" src="{{asset('img/logo.png')}}"/>
-            </div>
-        </li>
-        <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-teal">Rooms</a>
-
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="color.html"><i class="mdi-toggle-star"></i> Top Rooms</a></li>
-                            <li><a href="color.html"><i class="mdi-action-search"></i> Find Room</a></li>
-                            <li><a href="color.html"><i class="mdi-content-add"></i> New Room</a></li>
-                        </ul>
+<section class="fill background darken-4 text-foreground">
+    <div class="fill valign-wrapper ">
+        <div class="container valign">
+            <div class="background darken-3 login-box text-background pal text-lighten-3">
+                <div class="center pvl">
+                    <h2 class="">Welcome to Vote<span class="text-mainAccent text-accent-4">Play</span>! </h2>
+                    <span>Just a few questions to get to know you!</span>
+                </div>
+                <section class="container minimal-form">
+                    <form class="background darken-4 pam">
+                        <div class="minimal-form-input input-field col s12">
+                            <input id="Email" type="email" class="mbs validate">
+                            <label class="active" for="Email">Email</label>
+                        </div>
+                        <div class="minimal-form-input input-field col s12">
+                            <input id="Email" type="email" class="mbs validate">
+                            <label class="active" for="Email">Email</label>
+                        </div>
+                        <div class="minimal-form-input input-field col s12">
+                            <input id="Email" type="email" class="mbs validate">
+                            <label class="active" for="Email">Email</label>
+                        </div>
+                        <button class="minimal-form-button btn btn-flat text-mainAccent waves-effect" ng-click="next()">
+                            <i class="material-icons">play_arrow</i>
+                        </button>
+                    </form>
+                    <div class="minimal-form-progress-container pvn background darken-4">
+                        <div class="minimal-form-progress mainAccent background"></div>
                     </div>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#!">People</a></li>
-        <li><a href="#!">Top Votes</a></li>
-        <li><a href="#!">New Room</a></li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="hide-on-large-only button-collapse">
-        <i class="mdi-navigation-menu"></i>
-    </a>
-</div>
+                    <div class="minimal-form-questions text-background text-lighten-1 darken-2 pam">0/3</div>
+                </section>
+            </div>
+            <!-- /container -->
+        </div>
+    </div>
+</section>

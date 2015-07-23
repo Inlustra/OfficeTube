@@ -1,4 +1,6 @@
+@import "helpers/padding_margin";
 @import "public/bower_components/materialize/sass/materialize";
+
 
 .mainAccent {
   @extend .pink;
@@ -6,6 +8,14 @@
 
 .text-mainAccent {
   @extend .pink-text;
+}
+
+.secondaryAccent {
+  @extend .teal;
+}
+
+.text-secondaryAccent {
+  @extend .teal-text;
 }
 
 .background {

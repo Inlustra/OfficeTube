@@ -1,3 +1,5 @@
-app.controller('SignupController', function($scope) {
+app.controller('SignUpController', function ($scope) {
+    $scope.next = function () {
 
+    }
 });

@@ -1,0 +1,58 @@
+.minimal-form {
+    position: relative;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.minimal-form > form{
+    position:relative;
+}
+
+.minimal-form-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom:0;margin: auto;
+}
+
+.minimal-form-progress-container {
+    width: 100%;
+    height: 3px;
+}
+
+.minimal-form-progress {
+    width: 0;
+    height: 3px;
+    border-radius: 1px;
+    transition: width 0.2s;
+}
+
+.minimal-form-questions {
+    width:100%;
+    text-align: right;
+}
+
+.minimal-form-input {
+    width: 100%;
+}
+
+.minimal-form-current {
+    visibility:visible;
+    position:relative;
+    opacity:1;
+    transition:opacity 0.2s linear;
+}
+
+.minimal-form-hiding {
+    opacity:0;
+    transition:opacity 0.2s linear;
+}
+
+.minimal-form-hidden {
+    visibility:hidden;
+    position:absolute;
+    opacity:0;
+    transition:opacity 0.2s linear;
+}

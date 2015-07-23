@@ -7,12 +7,13 @@
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/app.css") }}"/>
         <link rel="stylesheet" href="{{ elixir("css/main.css") }}"/>
+        <link rel="stylesheet" href="{{ elixir("css/minimal-form.css") }}"/>
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body ng-app="VotePlay">
         <menu></menu>
-        <main class="fill" ui-view></main>
+        <main ui-view></main>
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
@@ -27,6 +28,8 @@
         <!-- build:js(public) scripts/app.js -->
         <script src="scripts/app/app.js"></script>
         <script src="scripts/app/config.js"></script>
+
+        <script src="scripts/component/minimal-form/minimal-form.directive.js"></script>
 
         <script src="scripts/app/main/main.js"></script>
         <script src="scripts/app/main/main.controller.js"></script>

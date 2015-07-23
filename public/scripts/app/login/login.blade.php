@@ -1,10 +1,10 @@
-<div class="fill background darken-4 text-foreground">
+<section class="fill background darken-4 text-foreground">
     <div class="fill valign-wrapper ">
         <div class="container valign">
             <div class="background darken-3 login-box text-background text-lighten-3">
                 <div class="center">
                     <h1 class="">Login to Vote<span class="text-mainAccent text-accent-4">Play</span>! </h1>
-                    <span><"Quote of the day goes here"></span>
+                    <span>[[randomQuote]]</span>
                 </div>
                 <section>
                     <form class="container">
@@ -32,7 +32,7 @@
                                 <div class="right">
                                     <a class="btn">Login</a>
                                     <a class="btn btn-flat text-mainAccent text-accent-4 background"
-                                       href="{{ URL::route('auth.register') }}">Sign up</a>
+                                       ui-sref="signup">Sign up</a>
                                 </div>
                             </div>
                         </div>
@@ -42,4 +42,4 @@
             <!-- /container -->
         </div>
     </div>
-</div>
+</section>
