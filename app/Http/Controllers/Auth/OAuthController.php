@@ -38,9 +38,9 @@ class OAuthController extends Controller
                 $authtoken->token = $token->getAccessToken();
                 $authtoken->expires_at = $token->getEndOfLife();
                 $user->oauths()->save($authtoken);
-                dd($user->get()->first());
+                return \Redirect::to('/#/signup/');
             }
-            dd("ALREADY GOT THAT ONE TY BRo");
+            return \Redirect::to('/#/signup/');
         }
         else {
             // get fb authorization

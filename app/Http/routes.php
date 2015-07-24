@@ -19,10 +19,6 @@
         return view('index');
     });
 
-    Route::get('/views/signup', function () {
-        return view('index');
-    });
-
     Route::get('/views/{name}', function ($name) {
         $view_path = getViewPath($name);
         if (View::exists($view_path)) {
