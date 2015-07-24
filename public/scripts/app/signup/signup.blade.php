@@ -78,6 +78,7 @@
                                         <div class="circle"></div>
                                     </div>
                                 </div>
+                            </div>
                         </h3>
                     </div>
                 </section>

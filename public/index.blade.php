@@ -4,6 +4,7 @@
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/app.css") }}"/>
         <link rel="stylesheet" href="{{ elixir("css/main.css") }}"/>
@@ -23,6 +24,7 @@
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-messages/angular-messages.js"></script>
         <script src="bower_components/materialize/bin/materialize.js"></script>
+        <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
         <!-- endbower -->
 
         <!-- build:js(public) scripts/app.js -->

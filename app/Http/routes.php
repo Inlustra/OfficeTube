@@ -1,5 +1,10 @@
 <?php
 
+    function getViewPath($name) {
+
+        return 'scripts.app.' . $name.'.'.$name;
+    }
+
     /*
     |--------------------------------------------------------------------------
     | Application Routes
@@ -14,14 +19,18 @@
         return view('index');
     });
 
+    Route::get('/views/signup', function () {
+        return view('index');
+    });
+
     Route::get('/views/{name}', function ($name) {
-        $view_path = 'scripts.app.' . $name.'.'.$name;
+        $view_path = getViewPath($name);
         if (View::exists($view_path)) {
             return View::make($view_path);
         }
-
         App::abort(404);
     });
+
 
     //Route::get('/', function () {
       //  return view('welcome');

@@ -15,29 +15,33 @@ class OAuthController extends Controller
 {
     public function loginWithSoundcloud(Request $request)
     {
-        // get data from request
+        $service = "SOUNDCLOUD";
         $code = $request->get('code');
-
-        // get fb service
         $sc = \OAuth::consumer('SoundCloud');
-
-        // check if code is valid
-
-        // if code is provided get user data and sign in
         if (!is_null($code)) {
-            // This was a callback request from facebook, get the token
-            $token = $sc->requestAccessToken($code);
 
-            // Send a request with it
+            $token = $sc->requestAccessToken($code);
             $result = json_decode($sc->request('me.json'), true);
 
-            $message = 'Your unique soundcloud user id is: ' . $result['id'];
-            echo $message . "<br/>";
-
-            //Var_dump
-            //display whole array.
-            dd($result);
-        } // if not ask for permission first
+            $authtoken = \App\OAuthToken::where('id', '=', $result['id'])
+                ->where('service', '=', $service)
+                ->first();
+            if($authtoken == null) {
+                var_dump($result);
+                $user = new \App\User;
+                $user->name = $result['first_name'];
+                $user->avatar = $result['avatar_url'];
+                $user->save();
+                $authtoken = new \App\OauthToken;
+                $authtoken->service = $service;
+                $authtoken->id = $result['id'];
+                $authtoken->token = $token->getAccessToken();
+                $authtoken->expires_at = $token->getEndOfLife();
+                $user->oauths()->save($authtoken);
+                dd($user->get()->first());
+            }
+            dd("ALREADY GOT THAT ONE TY BRo");
+        }
         else {
             // get fb authorization
             $url = $sc->getAuthorizationUri();

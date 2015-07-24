@@ -1,4 +1,5 @@
 var app = angular.module('VotePlay', [
     'ui.router',
-    'ngAnimate'
+    'ngAnimate',
+    'angular-loading-bar'
 ]);
