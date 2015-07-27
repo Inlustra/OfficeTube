@@ -15,7 +15,6 @@ html, body, main {
 
 .logo {
     height: 100px;
-    border-bottom: solid #F0F0F0 thin;
 }
 
 .logo img {
@@ -31,7 +30,6 @@ ul.side-nav.fixed li {
 }
 
 ul.side-nav.fixed li:hover, ul.side-nav.fixed li.active {
-    background-color: rgba(0, 0, 0, 0.05);
 }
 
 ul.side-nav.fixed li a {
@@ -41,7 +39,6 @@ ul.side-nav.fixed li a {
 }
 
 ul.side-nav.fixed ul.collapsible-accordion {
-    background-color: #FFF;
 }
 
 ul.side-nav.fixed:hover {

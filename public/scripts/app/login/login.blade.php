@@ -1,9 +1,9 @@
-<section class="fill background darken-4 text-foreground">
+<section class="fill bg tfg">
     <div class="fill valign-wrapper">
         <div class="container valign">
-            <div class="background darken-3 login-box text-background text-lighten-3 pam">
+            <div class="bgl pam login-box text-foreground">
                 <div class="center">
-                    <h1 class="">Login to Vote<span class="text-mainAccent text-accent-4">Play</span>! </h1>
+                    <h1 class="">Login to Vote<span class="tma">Play</span>! </h1>
                     <span>[[randomQuote]]</span>
                 </div>
                 <section>
@@ -31,7 +31,7 @@
                             <div class="col s12 m8">
                                 <div class="right">
                                     <a class="btn">Login</a>
-                                    <a class="btn btn-flat text-mainAccent text-accent-4 background"
+                                    <a class="btn btn-flat tma background"
                                        ui-sref="signup">Sign up</a>
                                 </div>
                             </div>
