@@ -1,9 +1,9 @@
-<section class="fill background darken-4 text-foreground">
+<section class="fill background text-foreground">
     <div class="fill valign-wrapper ">
         <div class="container valign">
-            <div class="background darken-3 login-box text-background text-lighten-3">
+            <div class="backgroundlight login-box text-foreground">
                 <div class="center">
-                    <h1 class="">Login to Vote<span class="text-mainAccent text-accent-4">Play</span>! </h1>
+                    <h1 class="">Login to Vote<span class="text-mainAccent">Play</span>! </h1>
                     <span>[[randomQuote]]</span>
                 </div>
                 <section>

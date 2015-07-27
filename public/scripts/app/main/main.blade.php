@@ -1,6 +1,6 @@
-<div class="section background lighten-4">
+<div class="section bg tfg">
     <div class="container">
-        <h1><span class="text-foreground text-darken-3">Vote</span><strong class="text-mainAccent text-accent-4">Play</strong>
+        <h1><span class="tfg">Vote</span><strong class="tma">Play</strong>
         </h1>
     </div>
     <div class="row">
@@ -10,41 +10,41 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col m4 s12 center">
+            <div class="col m4 s12 center tfg">
                 <i class="material-icons large glow">play_circle_outline</i>
 
-                <p class="text-mainAccent text-accent-4">
-                    <strong>Gather</strong> music from the websites you love:
+                <p class="tfg">
+                    <strong class="tma">Gather</strong> music from the websites you love:
                     YouTube, Soundcloud...
                 </p>
             </div>
-            <div class="col m4 s12 center">
+            <div class="col m4 s12 center text-foreground">
                 <i class="material-icons large glow">question_answer</i>
 
-                <p class="text-mainAccent  text-accent-4">
-                    <strong>Chat</strong> with people who like the same music as
+                <p class="tfg">
+                    <strong class="tma">Chat</strong> with people who like the same music as
                     you!
                 </p>
             </div>
-            <div class="col m4 s12 center">
+            <div class="col m4 s12 center text-foreground">
                 <i class="material-icons large glow">queue_music</i>
 
-                <p class="text-mainAccent text-accent-4">
-                    <strong>Discover</strong> new music, loved by others in the
+                <p class="tfg">
+                    <strong class="tma">Discover</strong> new music, loved by others in the
                     same room!
                 </p>
             </div>
         </div>
     </div>
 </div>
-<div class="section sign-up background darken-4">
-    <div class="container text-foreground text-lighten-1">
+<div class="section sign-up bg">
+    <div class="container tfg">
         <div class="row">
             <div class="col s12 m6 center">
                 Sign up with YouTube or Soundcloud!
             </div>
             <div class="col s12 m6 center">
-                <a class="btn-flat waves-effect waves-light text-mainAccent text-accent-2" ui-sref="login">
+                <a class="btn-flat waves-effect waves-light tsa" ui-sref="login">
                     Sign up
                 </a>
             </div>
