@@ -7,7 +7,7 @@ $classcolors: (
         "bg": color('blue-grey', 'darken-4'),
         "bgl": color('blue-grey', 'darken-3'),
         "bgll": color('blue-grey', 'darken-2'),
-        "fg": color('grey', 'lighten-1'),
+        "fg": color('grey', 'lighten-3'),
 );
 
 @each $key, $color in $classcolors {
@@ -26,7 +26,7 @@ $classcolors: (
 }
 
 .side-nav.fixed a {
-  color:#ffffff;
+  color:map-get($classcolors, fg);
 }
 
 .side-nav.fixed a:hover {
