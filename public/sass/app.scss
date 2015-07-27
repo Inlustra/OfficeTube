@@ -1,34 +1,127 @@
 @import "helpers/padding_margin";
 @import "public/bower_components/materialize/sass/materialize";
 
+
 $classcolors: (
-        "ma": color('pink', 'darken-3'),
-        "sa": color('deep-purple', 'accent-4'),
+        "sa": color('indigo', 'darken-1'),
+        "sal": color('indigo', 'base'),
+        "sall": color('indigo', 'lighten-1'),
+        "ma": color('pink', 'accent-4'),
+        "mal": color('pink', 'darken-1'),
+        "mall": color('pink', 'lighten-1'),
         "bg": color('blue-grey', 'darken-4'),
         "bgl": color('blue-grey', 'darken-3'),
         "bgll": color('blue-grey', 'darken-2'),
         "fg": color('grey', 'lighten-3'),
 );
 
+.transition02s {
+  transition: all 2s;
+}
+
 @each $key, $color in $classcolors {
   .#{$key} {
     background: $color;
   }
+
   .#{$key}h:hover {
+    @extend .transition02s;
     background: $color;
   }
+
   .t#{$key} {
     color: $color;
   }
+
   .t#{$key}h:hover {
+    @extend .transition02s;
     color: $color;
+  }
+
+  .t#{$key}g5 {
+    text-shadow: 0 0 5px $color;
+  }
+
+  .t#{$key}g10 {
+    text-shadow: 0 0 10px $color;
+  }
+
+
+  .t#{$key}g5h,.t#{$key}g10h,.t#{$key}g20h{
+    @extend .transition02s;
+    transition: text-shadow 0.2s;
+  }
+
+  .t#{$key}g5h:hover {
+    transition: text-shadow 0.2s;
+    text-shadow: 0 0 5px $color;
+  }
+
+  .t#{$key}g10h:hover {
+    transition: text-shadow 0.2s;
+    text-shadow: 0 0 10px $color;
+  }
+
+  .t#{$key}g20h:hover {
+    transition: text-shadow 0.2s;
+    text-shadow: 0 0 20px $color;
   }
 }
 
-.side-nav.fixed a {
-  color:map-get($classcolors, fg);
+.side-nav li.active {
+  color: map-get($classcolors, mall);
+  background-color: map-get($classcolors, bgl);
 }
 
-.side-nav.fixed a:hover {
-  color:map-get($classcolors, ma);
+.side-nav.fixed {
+  background-color: map-get($classcolors, bg);
+}
+
+.side-nav.fixed .collapsible-body {
+  background-color: map-get($classcolors, bgl);
+}
+
+.side-nav.fixed a {
+  color: map-get($classcolors, fg);
+}
+
+.side-nav.fixed a.active {
+  color: map-get($classcolors, mal);
+}
+
+.side-nav.fixed li:hover {
+  background-color: map-get($classcolors, bgll);
+}
+
+/* label color */
+.input-field label {
+  color: map-get($classcolors, fg);
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: map-get($classcolors, ma);
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid map-get($classcolors, ma);
+  box-shadow: 0 1px 0 0 map-get($classcolors, ma);
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
 }
