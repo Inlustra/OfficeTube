@@ -23,6 +23,7 @@ class OAuthController extends Controller
             $token = $sc->requestAccessToken($code);
             $result = json_decode($sc->request('me.json'), true);
 
+            dd($result);
             $authtoken = \App\OAuthToken::where('id', '=', $result['id'])
                 ->where('service', '=', $service)
                 ->first();
@@ -38,6 +39,7 @@ class OAuthController extends Controller
                 $authtoken->token = $token->getAccessToken();
                 $authtoken->expires_at = $token->getEndOfLife();
                 $user->oauths()->save($authtoken);
+                Auth::login($user);
                 return \Redirect::to('/#/signup/');
             }
             return \Redirect::to('/#/signup/');

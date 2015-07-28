@@ -1,13 +1,13 @@
-<section class="fill background darken-4 text-foreground">
+<section class="fill bg tfg">
     <div class="fill valign-wrapper ">
         <div class="container valign">
-            <div class="background darken-3 login-box text-background pal text-lighten-3">
+            <div class="bgl login-box pal ">
                 <div class="center pvl">
-                    <h2 class="">Welcome to Vote<span class="text-mainAccent text-accent-4">Play</span>! </h2>
-                    <span>Just a few questions to get to know you!</span>
+                    <h2 class="">Welcome to Vote<span class="tma">Play</span>! </h2>
+                    <span class="tbg">Just a few questions to get to know you!</span>
                 </div>
                 <section class="container minimal-form">
-                    <form novalidate name="myForm" class="background darken-4 pam">
+                    <form novalidate name="myForm" class="bgl pam">
                         <div class="minimal-form-input input-field col s12">
                             <input id="Full-Name" type="text" class="mbs validate" required>
                             <label class="active" for="Full-Name">Full Name</label>
@@ -27,7 +27,7 @@
                     <div class="minimal-form-progress-container pvn background darken-4">
                         <div class="minimal-form-progress mainAccent background"></div>
                     </div>
-                    <div class="minimal-form-questions text-background text-lighten-1 darken-2 pam">0/3</div>
+                    <div class="minimal-form-questions tbg pam">0/3</div>
                     <div class="minimal-form-end">
                         <h3 class="center">
                             <div class="preloader-wrapper big active">

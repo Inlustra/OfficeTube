@@ -12,6 +12,8 @@ $classcolors: (
         "bg": color('blue-grey', 'darken-4'),
         "bgl": color('blue-grey', 'darken-3'),
         "bgll": color('blue-grey', 'darken-2'),
+        "valid":color('green', 'accent-3'),
+        "invalid":color('red', 'accent-3'),
         "fg": color('grey', 'lighten-3'),
 );
 
@@ -99,29 +101,29 @@ $classcolors: (
 }
 
 /* label focus color */
-.input-field input[type=text]:focus + label {
-  color: map-get($classcolors, ma);
+.input-field input:focus + label {
+  color: map-get($classcolors, mal) !important;
 }
 
 /* label underline focus color */
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid map-get($classcolors, ma);
-  box-shadow: 0 1px 0 0 map-get($classcolors, ma);
+.input-field input:focus {
+  border-bottom: 1px solid map-get($classcolors, mal) !important;
+  box-shadow: 0 1px 0 0 map-get($classcolors, mal) !important;
 }
 
 /* valid color */
-.input-field input[type=text].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
+.input-field input.valid {
+  border-bottom: 1px solid map-get($classcolors, valid) !important;
+  box-shadow: 0 1px 0 0 map-get($classcolors, valid) !important;
 }
 
 /* invalid color */
-.input-field input[type=text].invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000;
+.input-field input.invalid {
+  border-bottom: 1px solid map-get($classcolors, invalid) !important;
+  box-shadow: 0 1px 0 0 map-get($classcolors, invalid) !important;
 }
 
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: #000;
+  color: map-get($classcolors, mal);
 }
