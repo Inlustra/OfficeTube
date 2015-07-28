@@ -14,6 +14,7 @@
     </head>
     <body ng-app="VotePlay">
         <menu></menu>
+        <user-experience></user-experience>
         <main ui-view></main>
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
