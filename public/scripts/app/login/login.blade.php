@@ -30,8 +30,8 @@
                             </div>
                             <div class="col s12 m8">
                                 <div class="right">
-                                    <a class="btn">Login</a>
-                                    <a class="btn btn-flat tma background"
+                                    <a class="btn ma malh tfg">Login</a>
+                                    <a class="btn-flat waves-effect waves-light tsa tsag20"
                                        ui-sref="signup">Sign up</a>
                                 </div>
                             </div>

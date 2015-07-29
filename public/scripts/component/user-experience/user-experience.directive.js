@@ -1,4 +1,4 @@
-app.directive('userExperience', function ($timeout) {
+app.directive('userExperience', function () {
     return {
         controller: 'UserExperienceController',
         templateUrl: '/components/user-experience'

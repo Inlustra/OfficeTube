@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="VotePlay">
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
@@ -12,10 +12,10 @@
         <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body ng-app="VotePlay">
-        <menu></menu>
-        <user-experience></user-experience>
-        <main ui-view></main>
+    <body ng-controller="AppController">
+        <menu ng-if="isLoggedIn()"></menu>
+        <user-experience ng-if="isLoggedIn()"></user-experience>
+        <main class="fill" ng-class="{push: isLoggedIn()}" ui-view></main>
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
@@ -38,6 +38,9 @@
         <script src="scripts/component/constants/apibaseurl.js"></script>
 
         <script src="scripts/component/auth/auth.js"></script>
+
+
+        <script src="scripts/app/app.controller.js"></script>
 
         <script src="scripts/component/minimal-form/minimal-form.directive.js"></script>
         <script src="scripts/component/user-experience/user-experience.controller.js"></script>

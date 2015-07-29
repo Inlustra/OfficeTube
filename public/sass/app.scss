@@ -18,7 +18,7 @@ $classcolors: (
 );
 
 .transition02s {
-  transition: all 2s;
+  transition: all 0.2s;
 }
 
 @each $key, $color in $classcolors {
@@ -98,6 +98,8 @@ $classcolors: (
 .side-nav.fixed li:hover {
   background-color: map-get($classcolors, bgll);
 }
+
+//-------MODIFY MATERIALIZECSS------------
 
 /* label color */
 .input-field label {

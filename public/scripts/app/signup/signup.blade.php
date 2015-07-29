@@ -20,7 +20,7 @@
                             <input id="Email" type="email" class="mbs validate">
                             <label class="active" for="Email">Email</label>
                         </div>
-                        <button class="minimal-form-button btn btn-flat text-mainAccent waves-effect" ng-click="next()">
+                        <button class="minimal-form-button btn btn-flat tsa tsag20 fgh waves-effect" ng-click="next()">
                             <i class="material-icons">play_arrow</i>
                         </button>
                     </form>
