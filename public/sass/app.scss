@@ -3,12 +3,12 @@
 
 
 $classcolors: (
-        "sa": color('indigo', 'darken-1'),
-        "sal": color('indigo', 'base'),
-        "sall": color('indigo', 'lighten-1'),
-        "ma": color('pink', 'accent-4'),
-        "mal": color('pink', 'darken-1'),
-        "mall": color('pink', 'lighten-1'),
+        "sa": color('light-blue', 'accent-3'),
+        "sal": color('light-blue', 'accent-2'),
+        "sall": color('light-blue', 'accent-1'),
+        "ma": color('pink', 'accent-3'),
+        "mal": color('pink', 'accent-2'),
+        "mall": color('pink', 'accent-1'),
         "bg": color('blue-grey', 'darken-4'),
         "bgl": color('blue-grey', 'darken-3'),
         "bgll": color('blue-grey', 'darken-2'),
@@ -48,6 +48,10 @@ $classcolors: (
     text-shadow: 0 0 10px $color;
   }
 
+  .t#{$key}g20 {
+    transition: text-shadow 0.2s;
+    text-shadow: 0 0 20px $color;
+  }
 
   .t#{$key}g5h,.t#{$key}g10h,.t#{$key}g20h{
     @extend .transition02s;

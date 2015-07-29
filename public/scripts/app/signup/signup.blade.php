@@ -1,10 +1,10 @@
 <section class="fill bg tfg">
     <div class="fill valign-wrapper ">
         <div class="container valign">
-            <div class="bgl login-box pal ">
+            <div class="bgl login-box pal z-depth-3" >
                 <div class="center pvl">
                     <h2 class="">Welcome to Vote<span class="tma">Play</span>! </h2>
-                    <span class="tbg">Just a few questions to get to know you!</span>
+                    <span class="tfg">Just a few questions to get to know you!</span>
                 </div>
                 <section class="container minimal-form">
                     <form novalidate name="myForm" class="bgl pam">
@@ -24,12 +24,12 @@
                             <i class="material-icons">play_arrow</i>
                         </button>
                     </form>
-                    <div class="minimal-form-progress-container pvn background darken-4">
-                        <div class="minimal-form-progress mainAccent background"></div>
+                    <div class="minimal-form-progress-container pvn bg">
+                        <div class="minimal-form-progress bgll"></div>
                     </div>
-                    <div class="minimal-form-questions tbg pam">0/3</div>
+                    <div class="minimal-form-questions tfg pam">0/3</div>
                     <div class="minimal-form-end">
-                        <h3 class="center">
+                        <div class="center">
                             <div class="preloader-wrapper big active">
                                 <div class="spinner-layer spinner-blue">
                                     <div class="circle-clipper left">
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </h3>
+                        </div>
                     </div>
                 </section>
             </div>

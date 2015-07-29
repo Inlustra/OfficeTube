@@ -3,8 +3,8 @@
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
-        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+        <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css"/>
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css"/>
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/app.css") }}"/>
         <link rel="stylesheet" href="{{ elixir("css/main.css") }}"/>
@@ -26,13 +26,25 @@
         <script src="bower_components/angular-messages/angular-messages.js"></script>
         <script src="bower_components/materialize/bin/materialize.js"></script>
         <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+        <script src="bower_components/ngstorage/ngStorage.js"></script>
         <!-- endbower -->
 
         <!-- build:js(public) scripts/app.js -->
+        <script src="scripts/component/jsutils.js"></script>
+
         <script src="scripts/app/app.js"></script>
         <script src="scripts/app/config.js"></script>
 
+        <script src="scripts/component/constants/apibaseurl.js"></script>
+
+        <script src="scripts/component/auth/auth.js"></script>
+
         <script src="scripts/component/minimal-form/minimal-form.directive.js"></script>
+        <script src="scripts/component/user-experience/user-experience.controller.js"></script>
+        <script src="scripts/component/user-experience/user-experience.directive.js"></script>
+
+
+        <script src="scripts/component/entity/user.factory.js"></script>
 
         <script src="scripts/app/main/main.js"></script>
         <script src="scripts/app/main/main.controller.js"></script>

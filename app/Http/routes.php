@@ -7,7 +7,7 @@ function getViewPath($name)
 
 function getComponentPath($name)
 {
-    return 'scripts.components.' . $name . '.' . $name;
+    return 'scripts.component.' . $name . '.' . $name;
 }
 
 /*

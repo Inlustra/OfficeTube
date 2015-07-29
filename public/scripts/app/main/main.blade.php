@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col m4 s12 center tfg">
-                <i class="material-icons large tsag20h">play_circle_outline</i>
+                <i class="material-icons large tmag20h">play_circle_outline</i>
 
                 <p class="tfg">
                     <strong class="tma">Gather</strong> music from the websites you love:
@@ -19,7 +19,7 @@
                 </p>
             </div>
             <div class="col m4 s12 center text-foreground">
-                <i class="material-icons large tsag20h">question_answer</i>
+                <i class="material-icons large tmag20h">question_answer</i>
 
                 <p class="tfg">
                     <strong class="tma">Chat</strong> with people who like the same music as
@@ -27,7 +27,7 @@
                 </p>
             </div>
             <div class="col m4 s12 center text-foreground">
-                <i class="material-icons large tsag20h">queue_music</i>
+                <i class="material-icons large tmag20h">queue_music</i>
 
                 <p class="tfg">
                     <strong class="tma">Discover</strong> new music, loved by others in the
@@ -44,7 +44,7 @@
                 Sign up with YouTube or Soundcloud!
             </div>
             <div class="col s12 m6 center">
-                <a class="btn-flat waves-effect waves-light tsall" ui-sref="login">
+                <a class="btn-flat waves-effect waves-light tsa tsag20" ui-sref="login">
                     Sign up
                 </a>
             </div>

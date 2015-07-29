@@ -1,7 +1,7 @@
 <section class="fill bg tfg">
     <div class="fill valign-wrapper">
         <div class="container valign">
-            <div class="bgl pam login-box text-foreground">
+            <div class="bgl pam login-box text-foreground z-depth-3">
                 <div class="center">
                     <h1 class="">Login to Vote<span class="tma">Play</span>! </h1>
                     <span>[[randomQuote]]</span>

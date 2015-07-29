@@ -1,7 +1,7 @@
-app.factory('userFactory', function ($http, $apiUrl) {
+app.factory('UserFactory', function ($http, $apiUrl) {
     var prefix = '/user';
     return {
-        currentUser: function () {
+        getUser: function () {
             return $http.get($apiUrl + prefix);
         },
         login: function (data) {

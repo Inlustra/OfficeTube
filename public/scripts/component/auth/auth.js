@@ -1,23 +1,38 @@
-app.factory('AuthService', function ($q, userFactory) {
-
+app.factory('AuthService', function ($q, UserFactory, $rootScope) {
     var currentUser = null;
+
+    function isLoggedIn() {
+        return angular.isDefined(currentUser) && !jQuery.isEmptyObject(currentUser) &&
+            currentUser !== null;
+    }
 
     function getUser() {
         var defer = $q.defer();
-        if (currentUser == null)
+        if (angular.isDefined(currentUser) && currentUser !== null) {
             defer.resolve(currentUser);
-        else
-            userFactory.getUser().success(function (user) {
+        } else {
+            UserFactory.getUser().success(function (user) {
                 defer.resolve(user);
             });
+        }
         return defer.promise;
     }
 
     function userUpdate() {
         getUser().then(function (user) {
-            this.currentUser = user;
+            if (jQuery.isEmptyObject(user) || !angular.isDefined(user)) {
+                if (isLoggedIn()) {
+                    $rootScope.$broadcast('auth.logout', currentUser);
+                }
+                currentUser = null;
+                return;
+            }
+            if (!isLoggedIn()) {
+                $rootScope.$broadcast('auth.login', user);
+            }
+            currentUser = user;
         }, function (reason) {
-            this.currentUser = null;
+            currentUser = null;
         });
     }
 
@@ -26,9 +41,8 @@ app.factory('AuthService', function ($q, userFactory) {
         },
         logout: function () {
         },
-        isLoggedIn: function () {
-        },
-        check: userUpdate(),
-        currentUser: currentUser
+        isLoggedIn: isLoggedIn,
+        check: userUpdate,
+        user: currentUser
     };
 });
