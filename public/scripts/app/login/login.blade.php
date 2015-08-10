@@ -23,7 +23,7 @@
                         <div class="row">
                             <div class="col s12 m4">
                                 <div class="left">
-                                    <a href="{{ URL::route('auth.soundcloud') }}">
+                                    <a ng-click="authenticate('soundcloud')">
                                         <img src="http://connect.soundcloud.com/2/btn-connect-l.png"/>
                                     </a>
                                 </div>

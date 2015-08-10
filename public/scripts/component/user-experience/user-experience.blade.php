@@ -1,5 +1,5 @@
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <img class="btn-floating btn-large" src="[[user.avatar]]"/>
+    <img class="btn-floating btn-large" src="[[2 + 2]]"/>
     <ul>
         <li><a class="btn-floating bgl"><i class="material-icons">insert_chart</i></a></li>
         <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>

@@ -41,7 +41,7 @@ Route::get('/components/{name}', function ($name) {
     return App::abort(404);
 });
 
-Route::get('auth/soundcloud', ['as' => 'auth.soundcloud', 'uses' => 'Auth\\OAuthController@loginWithSoundcloud']);
+Route::post('auth/soundcloud', ['as' => 'auth.soundcloud', 'uses' => 'Auth\\OAuthController@soundcloud']);
 
 
 Route::group(['prefix' => 'data'], function () {

@@ -3,8 +3,8 @@
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css"/>
-        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css"/>
+        <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/app.css") }}"/>
         <link rel="stylesheet" href="{{ elixir("css/main.css") }}"/>
@@ -27,18 +27,19 @@
         <script src="bower_components/materialize/bin/materialize.js"></script>
         <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
         <script src="bower_components/ngstorage/ngStorage.js"></script>
+        <script src="bower_components/satellizer/satellizer.js"></script>
         <!-- endbower -->
 
         <!-- build:js(public) scripts/app.js -->
         <script src="scripts/component/jsutils.js"></script>
 
-        <script src="scripts/app/app.js"></script>
-        <script src="scripts/app/config.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/config/config.js"></script>
+        <script src="scripts/config/auth.js"></script>
 
         <script src="scripts/component/constants/apibaseurl.js"></script>
 
         <script src="scripts/component/auth/auth.js"></script>
-
 
         <script src="scripts/app/app.controller.js"></script>
 
@@ -61,7 +62,7 @@
         <script src="scripts/app/login/login.js"></script>
         <script src="scripts/app/login/login.controller.js"></script>
 
-        <script src="scripts/app/run.js"></script>
+        <script src="scripts/run.js"></script>
         <!-- endbuild -->
     </body>
 

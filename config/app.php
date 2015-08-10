@@ -2,6 +2,7 @@
 
 return [
 
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
@@ -138,9 +139,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Artdarek\OAuth\OAuthServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
+        App\Providers\CAuthServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
@@ -193,6 +196,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'OAuth'     => Artdarek\OAuth\Facade\OAuth::class,
+        'CAuth'     => TheNairn\CAuth::class
 
     ],
 
