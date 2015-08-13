@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use TheNairn\CAuth;
 
 class CAuthServiceProvider extends ServiceProvider
 {
@@ -22,8 +23,8 @@ class CAuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['cauth'] = $this->app->share(function ($app) {
-            return new \TheNairn\CAuth;
+        $this->app->bind('CAuth', function ($app) {
+            return new CAuth;
         });
     }
 
@@ -34,6 +35,6 @@ class CAuthServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['TheNairn\CAuth'];
+        return ['CAuth'];
     }
 }

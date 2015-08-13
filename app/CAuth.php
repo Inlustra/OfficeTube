@@ -1,24 +1,27 @@
 <?php
 namespace TheNairn;
 
-use Illuminate\Support\Facades\Facade;
+class CAuth
+{
 
-class CAuth extends Facade {
-
-    public function getToken() {
+    public function getToken()
+    {
         $token = explode(' ', Request::header('Authorization'))[1];
         return JWT::decode($token, Config::get('app.token_secret'), array('HS256'));
     }
 
-    public function asToken($user) {
+    public function asToken($user)
+    {
         return ['token' => $this->createToken($user)];
     }
 
-    public function hasToken() {
+    public function hasToken()
+    {
         return Request::header('Authorization');
     }
 
-    public function getUser() {
+    public function getUser()
+    {
         return \App\User::find($this->getToken()['id']);
     }
 
@@ -38,8 +41,4 @@ class CAuth extends Facade {
      *
      * @return string
      */
-    protected static function getFacadeAccessor() {
-        return 'cauth';
-    }
-
 }
