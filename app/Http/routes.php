@@ -43,6 +43,8 @@ Route::get('/components/{name}', function ($name) {
 
 Route::post('auth/soundcloud', ['as' => 'auth.soundcloud', 'uses' => 'Auth\\OAuthController@soundcloud']);
 
+Route::post('auth/with/{provider}', ['as' => 'auth.with', 'uses' => 'Auth\\AuthController@handleProviderCallback']);
+
 
 Route::group(['prefix' => 'data'], function () {
     Route::get('user', ['as' => 'auth.user', 'uses' => 'Auth\\AuthController@getUser']);

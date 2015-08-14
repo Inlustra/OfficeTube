@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'soundcloud' => [
+        'client_id' => env('SOUNDCLOUD_KEY'),
+        'client_secret' => env('SOUNDCLOUD_SECRET'),
+        'redirect' => env('SOUNDCLOUD_REDIRECT_URI'),
+    ],
+
 ];
