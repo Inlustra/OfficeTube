@@ -65,21 +65,21 @@ class OAuthController extends Controller
         ];
         $profile = $client->get($graphApiUrl, ['query' => $params])->json();
         $authtoken = \App\OAuthToken::find($service, $profile['id']);
-        if (CAuth::hasToken()) {
+        if (\CAuth::hasToken()) {
             if ($authtoken->first()) {
                 return response()->json(['message' => 'There is already a Soundcloud account that belongs to you'], 409);
             }
-            $user = CAuth::getUser();
+            $user = \CAuth::getUser();
             $authtoken = new \App\OauthToken;
             $authtoken->service = $service;
             $authtoken->id = $profile['id'];
             $authtoken->token = $accessToken;
             $user->oauths()->save($authtoken);
-            return response()->json(CAuth::asToken($user));
+            return response()->json(\CAuth::asToken($user));
         }
 
         if ($authtoken->first()) {
-            return response()->json(CAuth::asToken($authtoken->first()->user()));
+            return response()->json(\CAuth::asToken($authtoken->first()->user));
         }
         $user = new \App\User;
         $user->name = $profile['first_name'];

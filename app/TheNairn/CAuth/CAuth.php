@@ -6,8 +6,8 @@ class CAuth
 
     public function getToken()
     {
-        $token = explode(' ', Request::header('Authorization'))[1];
-        return JWT::decode($token, Config::get('app.token_secret'), array('HS256'));
+        $token = explode(' ', \Request::header('Authorization'))[1];
+        return JWT::decode($token, \Config::get('app.token_secret'), array('HS256'));
     }
 
     public function asToken($user)
@@ -17,7 +17,7 @@ class CAuth
 
     public function hasToken()
     {
-        return Request::header('Authorization');
+        return \Request::header('Authorization');
     }
 
     public function getUser()
@@ -32,7 +32,7 @@ class CAuth
             'iat' => time(),
             'exp' => time() + (2 * 7 * 24 * 60 * 60)
         ];
-        return JWT::encode($payload, \Config::get('app.token_secret'));
+        return \JWT::encode($payload, \Config::get('app.token_secret'));
     }
 
 
