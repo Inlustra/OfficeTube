@@ -13,9 +13,9 @@
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body ng-controller="AppController">
-        <menu ng-if="isLoggedIn()"></menu>
-        <user-experience ng-if="isLoggedIn()"></user-experience>
-        <main class="fill" ng-class="{push: isLoggedIn()}" ui-view></main>
+        <menu ng-if="$root.currentUser"></menu>
+        <user-experience ng-if="$root.currentUser"></user-experience>
+        <main class="fill" ng-class="{push: $root.currentUser}" ui-view></main>
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>

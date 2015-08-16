@@ -4,7 +4,7 @@
             <div class="bgl pam login-box text-foreground z-depth-3">
                 <div class="center">
                     <h1 class="">Login to Vote<span class="tma">Play</span>! </h1>
-                    <span>[[randomQuote]]</span>
+                    <span>{[{randomQuote}]}</span>
                 </div>
                 <section>
                     <form class="container">
@@ -23,7 +23,7 @@
                         <div class="row">
                             <div class="col s12 m4">
                                 <div class="left">
-                                    <a ng-click="authenticate('soundcloud')">
+                                    <a href="#" ng-click="authenticate('soundcloud')">
                                         <img src="http://connect.soundcloud.com/2/btn-connect-l.png"/>
                                     </a>
                                 </div>

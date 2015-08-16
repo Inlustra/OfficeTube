@@ -1,13 +1,19 @@
 <?php
 namespace TheNairn;
 
+use \Firebase\JWT\JWT;
+
 class CAuth
 {
 
     public function getToken()
     {
+
+        if (\Request::header('Authorization') == null) {
+            return \App::abort(401, 'Not authenticated');
+        }
         $token = explode(' ', \Request::header('Authorization'))[1];
-        return JWT::decode($token, \Config::get('app.token_secret'), array('HS256'));
+        return JWT::decode($token, \Config::get('jwt.secret'), array('HS256'));
     }
 
     public function asToken($user)
@@ -22,23 +28,16 @@ class CAuth
 
     public function getUser()
     {
-        return \App\User::find($this->getToken()['id']);
+        return \App\User::find($this->getToken()->sub);
     }
 
     public function createToken($user)
     {
         $payload = [
-            'id' => $user->id,
+            'sub' => $user->id,
             'iat' => time(),
             'exp' => time() + (2 * 7 * 24 * 60 * 60)
         ];
-        return \JWT::encode($payload, \Config::get('app.token_secret'));
+        return JWT::encode($payload, \Config::get('jwt.secret'));
     }
-
-
-    /**
-     * Get the registered name of the component.
-     *
-     * @return string
-     */
 }
