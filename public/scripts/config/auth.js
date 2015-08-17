@@ -1,5 +1,5 @@
 app.config(function ($authProvider) {
-
+    $authProvider.loginRedirect = null;
     $authProvider.oauth2({
         url: '/auth/with/soundcloud',
         name: 'soundcloud',

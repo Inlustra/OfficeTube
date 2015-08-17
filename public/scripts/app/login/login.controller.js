@@ -1,14 +1,23 @@
-app.controller('LoginController', function ($scope, $auth, $rootScope) {
+app.controller('LoginController', function ($scope, $auth, Auth) {
     var quotes = [""];
     $scope.randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     $scope.auth = $auth;
 
+    $scope.user = {}
+
     $scope.authenticate = function (provider) {
-        $auth.authenticate(provider).then(function (success) {
-            $rootScope.$broadcast('auth.login');
+        Auth.authenticate(provider).then(function (user) {
+
         }, function (error) {
-            $rootScope.$broadcast('auth.error');
         });
-    };
+    }
+
+    $scope.login = function () {
+        Auth.login($scope.user).then(function (user) {
+
+        }, function (error) {
+
+        })
+    }
 
 });
