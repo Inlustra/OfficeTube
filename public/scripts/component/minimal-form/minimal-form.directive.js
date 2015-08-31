@@ -1,5 +1,14 @@
-app.directive('minimalForm', function ($timeout) {
+angular.module("minimalForm", []).directive('minimalForm', function ($timeout) {
     var form = function (scope, element, attrs) {
+
+        scope.$watch(
+            function () { return  element[0].querySelectorAll('.minimal-form-input').length; },
+            function (newValue, oldValue) {
+                initFields();
+                setProgress();
+                setNumber();
+            }
+        );
 
         var progress = angular.element(element[0].querySelector('.minimal-form-progress'));
         var currentNumber = 0;
@@ -9,6 +18,13 @@ app.directive('minimalForm', function ($timeout) {
         var max = inputList.length;
 
         function initFields() {
+
+            progress = angular.element(element[0].querySelector('.minimal-form-progress'));
+            currentNumber = 0;
+            inputList = element[0].querySelectorAll('.minimal-form-input');
+            nextButton = element[0].querySelector('button');
+            questions = angular.element(element[0].querySelector('.minimal-form-questions'));
+            max = inputList.length;
             for (var i = 0; i < inputList.length; i++) {
                 if (i == currentNumber) {
                     inputList[i].classList.remove('minimal-form-hidden');

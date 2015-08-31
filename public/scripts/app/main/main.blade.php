@@ -1,8 +1,5 @@
 <div class="section bg tfg">
-    <div class="container">
-        <h1><span class="tfg">Vote</span><strong class="tma">Play</strong>
-        </h1>
-    </div>
+
     <div class="row">
         <div class="col s12 center">
             <h4>Collaborative music anyone? <i class="material-icons"></i></h4>

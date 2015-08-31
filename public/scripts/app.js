@@ -3,5 +3,7 @@ var app = angular.module('VotePlay', [
     'ngAnimate',
     'angular-loading-bar',
     'satellizer',
-    'ngStorage'
+    'ngStorage',
+    'reveal',
+    'minimalForm'
 ]);

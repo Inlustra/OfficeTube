@@ -36,10 +36,6 @@
     text-align: right;
 }
 
-.minimal-form-input {
-    width: 100%;
-}
-
 .minimal-form-current {
     display: block !important;
     visibility: visible !important;

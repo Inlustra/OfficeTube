@@ -1,6 +1,6 @@
 <div>
     <ul id="slide-out" class="side-nav fixed">
-        <li class="logo center-align valign">
+        <li class="logo valign">
             <div class="fill valign-wrapper">
                 <img class="center-block valign" src="{{asset('img/logo.png')}}"/>
             </div>

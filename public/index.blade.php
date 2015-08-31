@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="VotePlay">
+<html ng-app="VotePlay" class="bg">
     <head>
         <title>VotePlay - @yield('title')</title>
         <!-- bower:css -->
@@ -13,9 +13,9 @@
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body ng-controller="AppController">
-        <menu ng-if="$root.currentUser"></menu>
+        <topbar></topbar>
+        <main class="fillw" ui-view></main>
         <user-experience ng-if="$root.currentUser"></user-experience>
-        <main class="fill" ng-class="{push: $root.currentUser}" ui-view></main>
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
@@ -33,22 +33,26 @@
         <!-- build:js(public) scripts/app.js -->
         <script src="scripts/component/jsutils.js"></script>
 
+        <script src="scripts/component/minimal-form/minimal-form.directive.js"></script>
+        <script src="scripts/component/reveal/reveal.directive.js"></script>
+
         <script src="scripts/app.js"></script>
         <script src="scripts/config/config.js"></script>
         <script src="scripts/config/auth.js"></script>
+
 
         <script src="scripts/component/constants/apibaseurl.js"></script>
 
         <script src="scripts/component/auth/auth.js"></script>
 
         <script src="scripts/app/app.controller.js"></script>
-
-        <script src="scripts/component/minimal-form/minimal-form.directive.js"></script>
         <script src="scripts/component/user-experience/user-experience.controller.js"></script>
         <script src="scripts/component/user-experience/user-experience.directive.js"></script>
 
 
-        <script src="scripts/component/entity/user.factory.js"></script>
+        <script src="scripts/component/entity/entity.js"></script>
+        <script src="scripts/component/entity/user/user.factory.js"></script>
+        <script src="scripts/component/entity/user/user.js"></script>
 
         <script src="scripts/app/main/main.js"></script>
         <script src="scripts/app/main/main.controller.js"></script>
@@ -61,6 +65,9 @@
 
         <script src="scripts/app/login/login.js"></script>
         <script src="scripts/app/login/login.controller.js"></script>
+
+        <script src="scripts/app/topbar/topbar.js"></script>
+        <script src="scripts/app/topbar/topbar.controller.js"></script>
 
         <script src="scripts/run.js"></script>
         <!-- endbuild -->
