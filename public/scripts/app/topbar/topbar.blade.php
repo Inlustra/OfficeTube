@@ -3,7 +3,7 @@
         <div class="nav-wrapper container">
             <a class="left valign-wrapper fillh" href="#">
                 <img class="logo valign" src="{{asset('img/logo.png')}}"/>
-                <h4>
+                <h4 class="prl">
                     <span class="tfg">Vote</span><strong class="tma">Play</strong>
                 </h4>
             </a>

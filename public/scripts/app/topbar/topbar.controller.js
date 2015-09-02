@@ -32,13 +32,16 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope) {
     $scope.isUserComplete = function () {
         return !!$rootScope.currentUser ? $rootScope.currentUser.isComplete() : true;
     };
+    
 
     $scope.$watch(function () {
         return $rootScope.currentUser
-    }, function (newValue, oldValue) {an
+    }, function (newValue, oldValue) {
+        if (newValue == null)
+            return;
         $scope.userClone = angular.copy(newValue);
-        console.log($scope.userClone.fullname+' '
-        +$scope.userClone.name+' '+$scope.userClone.email);
+        console.log($scope.userClone.fullname + ' '
+            + $scope.userClone.name + ' ' + $scope.userClone.email);
     });
 
 
