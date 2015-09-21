@@ -5,5 +5,6 @@ var app = angular.module('VotePlay', [
     'satellizer',
     'ngStorage',
     'reveal',
-    'minimalForm'
+    'minimalForm',
+    'datePicker'
 ]);

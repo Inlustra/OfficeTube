@@ -47,7 +47,8 @@ Route::post('auth/with/{provider}', ['as' => 'auth.with', 'uses' => 'Auth\\AuthC
 
 
 Route::group(['prefix' => 'data'], function () {
-    Route::get('user', ['as' => 'auth.user', 'uses' => 'Auth\\AuthController@getUser']);
+    Route::get('user', ['as' => 'auth.user', 'uses' => 'UserController@getUser']);
+    Route::put('user', ['as' => 'auth.user.update', 'uses' => 'UserController@updateUser']);
     Route::post('login', ['as' => 'auth.user.login', 'uses' => 'Auth\\AuthController@login']);
     Route::get('logout', ['as' => 'auth.user.logout', 'uses' => 'Auth\\AuthController@logout']);
 

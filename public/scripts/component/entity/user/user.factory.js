@@ -13,6 +13,9 @@ app.factory('UserFactory', function ($http, $apiUrl, $q, User) {
         getUser: function () {
             return wrap($http.get($apiUrl + prefix));
         },
+        updateUser: function (data) {
+            return wrap($http.put($apiUrl + prefix, JSON.stringify(data)));
+        },
         login: function (data) {
             return wrap($http.post($apiUrl + prefix + '/login', JSON.stringify(data)));
         },

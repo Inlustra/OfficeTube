@@ -5,6 +5,7 @@
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
         <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+        <link rel="stylesheet" href="bower_components/angular-datepicker/dist/angular-datepicker.css" />
         <!-- endbower -->
         <link rel="stylesheet" href="{{ elixir("css/app.css") }}"/>
         <link rel="stylesheet" href="{{ elixir("css/main.css") }}"/>
@@ -28,6 +29,9 @@
         <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
         <script src="bower_components/ngstorage/ngStorage.js"></script>
         <script src="bower_components/satellizer/satellizer.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/angular-moment/angular-moment.js"></script>
+        <script src="bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
         <!-- endbower -->
 
         <!-- build:js(public) scripts/app.js -->

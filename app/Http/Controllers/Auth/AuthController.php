@@ -61,7 +61,4 @@ class AuthController extends Controller
         return $authtoken;
     }
 
-    public function getUser(\Request $request) {
-        return \CAuth::getUser();
-    }
 }

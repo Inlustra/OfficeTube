@@ -1,4 +1,4 @@
-app.controller('TopbarController', function ($scope, $auth, $rootScope) {
+app.controller('TopbarController', function ($scope, $auth, $rootScope, UserFactory) {
     function init() {
         setTimeout(function () {
             $('.dropdown-button').dropdown({
@@ -32,17 +32,14 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope) {
     $scope.isUserComplete = function () {
         return !!$rootScope.currentUser ? $rootScope.currentUser.isComplete() : true;
     };
-    
 
-    $scope.$watch(function () {
-        return $rootScope.currentUser
-    }, function (newValue, oldValue) {
-        if (newValue == null)
-            return;
-        $scope.userClone = angular.copy(newValue);
-        console.log($scope.userClone.fullname + ' '
-            + $scope.userClone.name + ' ' + $scope.userClone.email);
-    });
+    $scope.finishEdits = function () {
+        UserFactory.updateUser($rootScope.currentUser.tempEdits).then(function (user) {
+            $rootScope.currentUser.finalizeEdits();
+        }, function (error) {
+            $rootScope.$broadcast('auth.error');
+        });
+    };
 
 
     init();

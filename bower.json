@@ -10,6 +10,7 @@
     "materialize": "~0.97.0",
     "angular-loading-bar": "~0.8.0",
     "ngstorage": "~0.3.7",
-    "satellizer": "~0.11.3"
+    "satellizer": "~0.11.3",
+    "angular-datepicker": "~1.0.16"
   }
 }

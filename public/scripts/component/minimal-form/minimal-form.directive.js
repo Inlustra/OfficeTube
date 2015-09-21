@@ -1,8 +1,12 @@
-angular.module("minimalForm", []).directive('minimalForm', function ($timeout) {
+angular.module("minimalForm", []).directive('minimalForm', function ($parse, $timeout) {
     var form = function (scope, element, attrs) {
-
+        var expressionHandler;
+        if (attrs.onEnd)
+            expressionHandler = $parse(attrs.onEnd);
         scope.$watch(
-            function () { return  element[0].querySelectorAll('.minimal-form-input').length; },
+            function () {
+                return element[0].querySelectorAll('.minimal-form-input').length;
+            },
             function (newValue, oldValue) {
                 initFields();
                 setProgress();
@@ -50,16 +54,22 @@ angular.module("minimalForm", []).directive('minimalForm', function ($timeout) {
 
         function end() {
             var current = element[0].querySelector('.minimal-form > form');
-            current.classList.add('minimal-form-hidden');
+            if (current)
+                current.classList.add('minimal-form-hidden');
             current = element[0].querySelector('.minimal-form-progress-container');
-            current.classList.add('minimal-form-hidden');
+            if (current)
+                current.classList.add('minimal-form-hidden');
             current = element[0].querySelector('.minimal-form-questions');
-            current.classList.add('minimal-form-hidden');
-            nextButton.classList.add('minimal-form-hidden');
-
+            if (current)
+                current.classList.add('minimal-form-hidden');
             current = element[0].querySelector('.minimal-form-end');
-            current.classList.remove('minimal-form-hidden');
-            current.classList.add('minimal-form-current');
+            if (current) {
+                current.classList.remove('minimal-form-hidden');
+                current.classList.add('minimal-form-current');
+            }
+            nextButton.classList.add('minimal-form-hidden');
+            if (expressionHandler)
+                expressionHandler(scope);
         }
 
         function setProgress() {

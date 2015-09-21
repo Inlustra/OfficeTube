@@ -86,21 +86,30 @@
         <div class="divider bgll"></div>
     </reveal>
     <reveal when="!isUserComplete()" style="display:block;">
-        <section class="minimal-form container pan">
+        <section class="minimal-form container pan" on-end="finishEdits()">
             <form novalidate name="myForm" class="bg pam">
-                <div class="minimal-form-input input-field col s11" ng-if="userClone.needsFullName()" required>
-                    <input id="Full-Name" type="text" class="plm tfg mbs validate" ng-model="$root.currentUser.fullname" required>
+                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsFullName()" required>
+                    <input id="Full-Name" type="text" class="plm tfg mbs validate"
+                           ng-model="$root.currentUser.edit.fullname" required>
                     <label class="active" for="Full-Name">What's your name?</label>
                 </div>
-                <div class="minimal-form-input input-field col s11" ng-if="userClone.needsName()" required>
-                    <input id="Name" type="text" class="plm tfg mbs validate" ng-model="$root.currentUser.name" required>
+                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsName()" required>
+                    <input id="Name" type="text" class="plm tfg mbs validate" ng-model="$root.currentUser.edit.name"
+                           required>
                     <label class="active" for="Name">What should we call you?</label>
                 </div>
-                <div class="minimal-form-input input-field col s11" ng-if="userClone.needsEmail()" required>
-                    <input id="Email" type="email" class="plm tfg mbs validate" ng-model="$root.currentUser.email" required>
-                    <label class="active" for="Email">Where can we reach you? (E-mail)</label>
+                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsEmail()" required>
+                    <input id="Email" type="email" class="plm tfg mbs validate" ng-model="$root.currentUser.edit.email"
+                           required>
+                    <label class="active" for="Email">What's your e-mail address? (In case you lose access to your
+                        account!)</label>
                 </div>
-
+                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsEmail()" required>
+                    <input id="DoB" type="text" date-time min-view="date" auto-close="true" view="year"
+                           class="plm tfg mbs validate" ng-model="$root.currentUser.edit.dob" max-date="date | date:'2010-01-01'"
+                           required>
+                    <label class="active" for="DoB">What is your date of birth?</label>
+                </div>
                 <button class="minimal-form-button btn btn-flat tsa tsag20 bgh waves-effect" ng-click="next()">
                     <i class="material-icons">play_arrow</i>
                 </button>
