@@ -20,24 +20,23 @@ app.factory('User', function (Entity) {
     };
 
     User.prototype.isComplete = function () {
-        return !this.needsFullName && !this.needsEmail() && !this.needsName() && this.needsDoB();
+        return this.hasFullName && this.hasEmail() && this.hasName() && this.hasDoB() && this.hasPassword;
     };
 
-    User.prototype.needsFullName = function () {
-        console.log(this.fullname + ' ' + !this.fullname);
-        return !this.fullname;
+    User.prototype.hasFullName = function () {
+        return !!this.fullname;
     };
 
-    User.prototype.needsName = function () {
-        return !this.name;
+    User.prototype.hasName = function () {
+        return !!this.name;
     };
 
-    User.prototype.needsEmail = function () {
-        return !this.email;
+    User.prototype.hasEmail = function () {
+        return !!this.email;
     };
 
-    User.prototype.needsDoB = function () {
-        return !this.dob;
+    User.prototype.hasDoB = function () {
+        return !!this.dob;
     };
 
 

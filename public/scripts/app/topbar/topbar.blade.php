@@ -56,13 +56,13 @@
         <div class="container">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="Email" type="email" class="validate">
+                    <input id="Email" type="email" class="plm tfg mbs validate" ng-model="loginform.email">
                     <label for="Email">Email</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password" type="password" class="plm tfg mbs validate" ng-model="loginform.password">
                     <label for="password">Password</label>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="col s12 m8">
                     <div class="right">
-                        <a class="btn ma malh tfg">Login</a>
+                        <a class="btn ma malh tfg" ng-click="login()">Login</a>
                         <a class="btn-flat waves-effect waves-light tsa tsag20"
                            ui-sref="signup">Sign up</a>
                     </div>
@@ -88,23 +88,28 @@
     <reveal when="!isUserComplete()" style="display:block;">
         <section class="minimal-form container pan" on-end="finishEdits()">
             <form novalidate name="myForm" class="bg pam">
-                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsFullName()" required>
-                    <input id="Full-Name" type="text" class="plm tfg mbs validate"
-                           ng-model="$root.currentUser.edit.fullname" required>
-                    <label class="active" for="Full-Name">What's your name?</label>
-                </div>
-                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsName()" required>
+                <div class="minimal-form-input input-field col s11" ng-if="!$root.currentUser.hasName()" required>
                     <input id="Name" type="text" class="plm tfg mbs validate" ng-model="$root.currentUser.edit.name"
                            required>
-                    <label class="active" for="Name">What should we call you?</label>
+                    <label class="active" for="Name">What should we call you? (On the website)</label>
                 </div>
-                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsEmail()" required>
+                <div class="minimal-form-input input-field col s11" ng-if="!$root.currentUser.hasEmail()" required>
                     <input id="Email" type="email" class="plm tfg mbs validate" ng-model="$root.currentUser.edit.email"
                            required>
-                    <label class="active" for="Email">What's your e-mail address? (In case you lose access to your
-                        account!)</label>
+                    <label class="active" for="Email">What's your e-mail address? (For logging in!)</label>
                 </div>
-                <div class="minimal-form-input input-field col s11" ng-if="$root.currentUser.needsEmail()" required>
+
+                <div class="minimal-form-input input-field col s11" ng-if="!$root.currentUser.hasPassword" required>
+                    <input id="Password" type="password" class="plm tfg mbs validate"
+                           ng-model="$root.currentUser.edit.password" required>
+                    <label class="active" for="Password">Secure your account with a password</label>
+                </div>
+                <div class="minimal-form-input input-field col s11" ng-if="!$root.currentUser.hasFullName()" required>
+                    <input id="Full-Name" type="text" class="plm tfg mbs validate"
+                           ng-model="$root.currentUser.edit.fullname" required>
+                    <label class="active" for="Full-Name">Can we get a fullname?</label>
+                </div>
+                <div class="minimal-form-input input-field col s11" ng-if="!$root.currentUser.hasDoB()" required>
                     <input id="DoB" type="text" date-time min-view="date" auto-close="true" view="year"
                            class="plm tfg mbs validate" ng-model="$root.currentUser.edit.dob" max-date="date | date:'2010-01-01'"
                            required>

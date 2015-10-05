@@ -32,6 +32,9 @@ class UserController extends Controller
         $this->updateIfHas($user, 'email');
         $this->updateIfHas($user, 'avatar');
         $this->updateIfHas($user, 'dob');
+        if (Input::has('password')) {
+            $user['password'] = \Hash::make(Input::get('password'));
+        }
         $user->save();
         return $user->toJson();
     }

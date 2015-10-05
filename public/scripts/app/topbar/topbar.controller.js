@@ -8,6 +8,8 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope, UserFact
         }, 0);
     }
 
+    $scope.loginform = {email: "", password:""};
+
     $scope.showLogin = false;
 
     $scope.toggleLogin = function () {
@@ -20,22 +22,33 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope, UserFact
     };
 
     $scope.authenticate = function (provider) {
-        $auth.authenticate(provider).then(function (success) {
-            $rootScope.$broadcast('auth.login');
-            $scope.showLogin = false;
-            init();
-        }, function (error) {
-            $rootScope.$broadcast('auth.error');
-        });
+        handleResponse($auth.authenticate(provider));
     };
+
+    $scope.login = function () {
+        handleResponse($auth.login($scope.loginform));
+    };
+
+    function handleResponse(auth) {
+     auth.then(function (success) {
+         $rootScope.$broadcast('auth.login');
+         $scope.showLogin = false;
+         init();
+     }, function (error) {
+         $rootScope.$broadcast('auth.error');
+     });
+    }
 
     $scope.isUserComplete = function () {
         return !!$rootScope.currentUser ? $rootScope.currentUser.isComplete() : true;
     };
 
     $scope.finishEdits = function () {
-        UserFactory.updateUser($rootScope.currentUser.tempEdits).then(function (user) {
-            $rootScope.currentUser.finalizeEdits();
+        UserFactory.updateUser($rootScope.currentUser.edit).then(function (user) {
+            $rootScope.currentUser = user;
+            console.log("Edited!");
+            console.log(user)
+            $rootScope.$broadcast('auth.edit');
         }, function (error) {
             $rootScope.$broadcast('auth.error');
         });

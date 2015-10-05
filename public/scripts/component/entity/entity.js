@@ -15,3 +15,14 @@ app.factory('Entity', function () {
 
     return Entity;
 });
+app.service('Build', function($q) {
+    var deferred = $q.defer();
+    return function (entity, method) {
+        method.then(function(data) {
+            deferred.resolve(entity.build(data.data));
+        }, function(error) {
+            deferred.reject(error);
+        });
+        return deferred.promise;
+    }
+});

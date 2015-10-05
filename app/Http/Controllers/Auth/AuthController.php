@@ -3,13 +3,28 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Auth;
+use Response;
+use Input;
 use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+
+    public function login(Request $request)
+    {
+        $this->validate($request, ['email' => 'email|required']);
+        $credentials = ['email' => Input::get('email'), 'password' => Input::get('password')];
+        if (Auth::once($credentials)) {
+            return response()->json(\CAuth::asToken(Auth::user()));
+        }
+        return Response::json(array(
+            'msg' => 'Incorrect login details.'
+        ), 400);
+    }
+
 
     public function handleProviderCallback(\Request $request, $service)
     {
@@ -34,7 +49,7 @@ class AuthController extends Controller
         $user = null;
         if (\CAuth::hasToken()) { //Already logged in, link accounts
             $user = \CAuth::getUser();
-            if($user == null) {
+            if ($user == null) {
                 $user = $this->createUser($profile);
             }
         } else {
@@ -44,7 +59,8 @@ class AuthController extends Controller
         return response()->json(\CAuth::asToken($user));
     }
 
-    public function createUser($profile) {
+    public function createUser($profile)
+    {
         $user = new \App\User;
         $user->name = $profile['first_name'];
         $user->avatar = $profile['avatar_url'];

@@ -49,7 +49,10 @@ angular.module("minimalForm", []).directive('minimalForm', function ($parse, $ti
                 current.classList.add('minimal-form-hidden');
                 inputList[currentNumber].classList.remove('minimal-form-hidden');
                 inputList[currentNumber].classList.add('minimal-form-current');
+                inputList[currentNumber].children[0].focus();
+                window.setTimeout(function(){inputList[currentNumber].children[0].focus();}, 50);
             }, 200);
+            inputList[currentNumber].children[0].focus();
         }
 
         function end() {

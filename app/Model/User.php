@@ -11,6 +11,12 @@
     class User extends Model implements AuthenticatableContract, CanResetPasswordContract
     {
         use Authenticatable, CanResetPassword;
+        protected $appends = array('hasPassword');
+
+        public function getHasPasswordAttribute()
+        {
+            return !empty($this->password);
+        }
 
         /**
          * The database table used by the model.
