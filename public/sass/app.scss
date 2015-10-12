@@ -1,7 +1,6 @@
 @import "helpers/padding_margin";
 @import "public/bower_components/materialize/sass/materialize";
 
-
 $classcolors: (
         "sa": color('light-blue', 'accent-3'),
         "sal": color('light-blue', 'accent-2'),
@@ -53,7 +52,7 @@ $classcolors: (
     text-shadow: 0 0 20px $color;
   }
 
-  .t#{$key}g5h,.t#{$key}g10h,.t#{$key}g20h{
+  .t#{$key}g5h, .t#{$key}g10h, .t#{$key}g20h {
     @extend .transition02s;
     transition: text-shadow 0.2s;
   }
@@ -71,6 +70,27 @@ $classcolors: (
   .t#{$key}g20h:hover {
     transition: text-shadow 0.2s;
     text-shadow: 0 0 20px $color;
+  }
+
+  @for $i from 1 through 5 {
+    .bb#{$i}#{$key} {
+
+    }
+    .bt#{$i}#{$key} {
+
+    }
+    .bl#{$i}#{$key} {
+
+    }
+    .br#{$i}#{$key} {
+
+    }
+    .bh#{$i}#{$key} {
+
+    }
+    .bv#{$i}#{$key} {
+
+    }
   }
 }
 

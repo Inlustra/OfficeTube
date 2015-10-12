@@ -8,7 +8,7 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope, UserFact
         }, 0);
     }
 
-    $scope.loginform = {email: "", password:""};
+    $scope.loginform = {email: "", password: ""};
 
     $scope.showLogin = false;
 
@@ -30,13 +30,13 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope, UserFact
     };
 
     function handleResponse(auth) {
-     auth.then(function (success) {
-         $rootScope.$broadcast('auth.login');
-         $scope.showLogin = false;
-         init();
-     }, function (error) {
-         $rootScope.$broadcast('auth.error');
-     });
+        auth.then(function (success) {
+            $rootScope.$broadcast('auth.login');
+            $scope.showLogin = false;
+            init();
+        }, function (error) {
+            $rootScope.$broadcast('auth.error');
+        });
     }
 
     $scope.isUserComplete = function () {
@@ -50,7 +50,7 @@ app.controller('TopbarController', function ($scope, $auth, $rootScope, UserFact
             console.log(user)
             $rootScope.$broadcast('auth.edit');
         }, function (error) {
-            $rootScope.$broadcast('auth.error');
+            $rootScope.$broadcast('auth.error', error);
         });
     };
 
